@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="UJr-1o-auc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Kkg-ei-zsc">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="UJr-1o-auc" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="Yc2-au-xS9">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PgM-ow-ofy" kind="relationship" relationship="rootViewController" id="WPT-S8-Lxv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="orh-dM-nF3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="60"/>
+        </scene>
+        <!--My Parent View Controller-->
+        <scene sceneID="kDS-Gj-G8b">
+            <objects>
+                <viewController id="PgM-ow-ofy" customClass="myParentViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9uE-D3-TIg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Main Page.png" translatesAutoresizingMaskIntoConstraints="NO" id="RvT-TC-D88"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ck-wQ-y2M">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="Qbe-Ht-9oo"/>
+                                    <constraint firstAttribute="height" constant="42" id="aHt-y6-DpY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="Create.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9vC-TO-xdN" kind="push" identifier="segueToCreate" id="0a9-hG-32J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTR-Uo-IWX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="Hhq-aj-xLJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="Recognize.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qez-wy-0XB" kind="push" identifier="segueToRecognize" id="hZc-qt-IBS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1ck-wQ-y2M" firstAttribute="trailing" secondItem="gTR-Uo-IWX" secondAttribute="trailing" type="default" id="8I9-hu-BcL"/>
+                            <constraint firstItem="RvT-TC-D88" firstAttribute="bottom" secondItem="9uE-D3-TIg" secondAttribute="bottom" type="default" id="9fl-Ip-BB6"/>
+                            <constraint firstItem="RvT-TC-D88" firstAttribute="trailing" secondItem="9uE-D3-TIg" secondAttribute="trailing" type="default" id="FvY-Yu-2aV"/>
+                            <constraint firstItem="RvT-TC-D88" firstAttribute="leading" secondItem="9uE-D3-TIg" secondAttribute="leading" type="default" id="GvU-vu-gck"/>
+                            <constraint firstItem="gTR-Uo-IWX" firstAttribute="leading" secondItem="1ck-wQ-y2M" secondAttribute="leading" type="default" id="W2g-LN-Pf6"/>
+                            <constraint firstAttribute="bottom" secondItem="gTR-Uo-IWX" secondAttribute="bottom" constant="148" id="XzZ-rD-Rn7"/>
+                            <constraint firstItem="gTR-Uo-IWX" firstAttribute="centerX" secondItem="RvT-TC-D88" secondAttribute="centerX" type="default" id="aOs-nO-9d6"/>
+                            <constraint firstItem="1ck-wQ-y2M" firstAttribute="top" secondItem="9uE-D3-TIg" secondAttribute="top" constant="233" id="gmF-9n-Tvd"/>
+                            <constraint firstItem="RvT-TC-D88" firstAttribute="top" secondItem="9uE-D3-TIg" secondAttribute="top" type="default" id="hKp-NS-4XG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lrt-tu-3D3"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2P-H1-4ah" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429" y="60"/>
+        </scene>
+        <!--CreateAR View Controller-->
+        <scene sceneID="qIO-4q-8wA">
+            <objects>
+                <viewController id="9vC-TO-xdN" customClass="createARViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YnI-7c-4JD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kNP-lL-aTM"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mnb-C6-OYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="-355"/>
+        </scene>
+        <!--RecognizeAR View Controller-->
+        <scene sceneID="8Es-82-ORe">
+            <objects>
+                <viewController id="qez-wy-0XB" customClass="recognizeARViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wfY-JD-hd8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xZY-IK-4dq"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gug-oh-K5Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1241" y="60"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Create.png" width="314" height="84"/>
+        <image name="Main Page.png" width="640" height="1136"/>
+        <image name="Recognize.png" width="314" height="84"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="createARViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/createARViewController.h"/>
+        </class>
+        <class className="myParentViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/myParentViewController.h"/>
+        </class>
+        <class className="recognizeARViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/recognizeARViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
