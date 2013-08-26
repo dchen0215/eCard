@@ -93,7 +93,7 @@
     // to be set as a new image target
     
     // Shrink the photo
-    CGSize shrinkSize = CGSizeMake(self.imagetTarget.size.width / 2.5, self.imagetTarget.size.height / 2.5);
+    CGSize shrinkSize = CGSizeMake(self.imagetTarget.size.width / 3, self.imagetTarget.size.height / 3);
     self.imagetTarget = [self resizeImage:self.imagetTarget toSize:shrinkSize];
     
     // Prompt the user for the target name - doesn't really matter though
